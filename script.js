@@ -12,10 +12,20 @@ let calculator=(event)=>{
         
     }else if (event.target.textContent == 'C') {
         value.textContent="";
-    }else{
+    }else if (event.target.textContent == 'x') {
+        value.append('*');
+    }
+    else{
         calc=event.target.textContent;
         value.append(calc);
     }
+    
+}
+
+let newArr=Array.from(getNumbers);
+newArr.forEach((data)=>{
+    data.addEventListener('click',calculator);
+});
     
 }
 
