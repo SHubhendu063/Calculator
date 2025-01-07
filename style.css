@@ -11,7 +11,7 @@ html,body{
 .main{
     height: 100%;
     width: 100%;
-    background-color: #d5d4d4;
+    background-color: #a1a1a1cd;
 }
 
 .container{
@@ -32,16 +32,20 @@ html,body{
 .calculator_1 .textfild{
     height: 100%;
     width:100%;
-    border: 0.1rem solid rgb(125, 125, 125);
+    border: 0.1rem solid #8d8989;
     color: black;
     font-size: 7rem;
-    /* text-align:end; */
     text-wrap:wrap;
-    border-radius: 0.6rem;
-    -webkit-border-radius: 0.6rem;
-    -moz-border-radius: 0.6rem;
-    -ms-border-radius: 0.6rem;
-    -o-border-radius: 0.6rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    align-items: flex-end;
 }
 .calculator_2{
     width: 80%;
@@ -49,19 +53,20 @@ html,body{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(4,1fr);
-    gap: 0.2rem;
+    gap: 0.5rem;
+    margin: 0rem 0rem 1rem 0rem;
 }
 .inputclass{
-    box-shadow:inset 7px 7px 24px -13px rgb(166, 164, 164);
-    background-color:#484545;
-    color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    background-color:#ffffff;
+    color: #000000;
     font-size: 3rem;
-    border: 0.1rem solid rgb(125, 125, 125);
-    border-radius: 0.6rem;
-    -webkit-border-radius: 0.6rem;
-    -moz-border-radius: 0.6rem;
-    -ms-border-radius: 0.6rem;
-    -o-border-radius: 0.6rem;
+    border:none;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 #inputclass_5{
     grid-column-start:5;
@@ -78,4 +83,30 @@ html,body{
     grid-column-end: 6;
     grid-row-start:3;
     grid-row-end: 5;
+}
+
+@media(max-width:400px) {
+    .calculator_1 .textfild{
+        font-size: 5rem;
+    }
+    .calculator_2{
+        grid-template-columns: repeat(4,0.4fr);
+        grid-template-rows: repeat(5,0.4fr);
+    }
+    .inputclass{
+        font-size: 2rem;
+    }
+    #inputclass_5{
+        grid-column-start:1;
+        grid-column-end: 3;
+        grid-row-start:5;
+        grid-row-end: 6;
+    }
+    #inputclass_16{
+        grid-column-start:3;
+        grid-column-end: 5;
+        grid-row-start:5;
+        grid-row-end: 6;
+    }
+
 }
